@@ -8,7 +8,7 @@ The reason I started this project is because I wanted to have a cheap, simple ye
 The commercial systems are way to expensive, or consists of simple on/off systems.
 
 
-Why
+Why?
 ======
 I wanted to have a home automation fora while, and after some researches on the Internet, I couldn't find something that _really_ suits my needs.
 
