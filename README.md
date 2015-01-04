@@ -57,4 +57,4 @@ Changelog
 
 Contributors
 =====
-If you want to contribute, feel free to contact me!
+Feel free to fork this repository and improve the code, any pull-request will be welcome.
