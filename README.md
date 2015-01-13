@@ -35,11 +35,12 @@ Physical layer
 bHome relies on UHF 433MHz frequencies. The project relies on the VirtualWire implementation.
 
 
-Transport layer
+Data link
+------
+
+Transport
 -------
 
-Application layer
--------
 
 The master is the only one which can start a communication, the nodes can only answer (ACK or "real" answer).
 
