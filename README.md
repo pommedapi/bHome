@@ -29,19 +29,6 @@ bHome is architectured like this:
 
 Protocol
 =====
-
-Physical layer
-------
-bHome relies on UHF 433MHz frequencies. The project relies on the VirtualWire implementation.
-
-
-Data link
-------
-
-Transport
--------
-
-
 The master is the only one which can start a communication, the nodes can only answer (ACK or "real" answer).
 
 The master can send packets to a single receiver, or to everyone (broadcast).
