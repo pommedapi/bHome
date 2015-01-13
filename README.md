@@ -34,11 +34,19 @@ Physical layer
 ------
 bHome relies on UHF 433MHz frequencies. The project relies on the VirtualWire implementation.
 
++----------+--------------+----------------+----------+-----------+
+| PREAMBLE | START SYMBOL | MESSAGE LENGTH | PAYLOAD  | FCS       |
++-----------------------------------------------------------------+
+|          | 0xb38        | (4 to 30)      | max = 27 |           |
+| 32 bits  | 12 bits      | 1 byte         | n Bytes  | 2 bytes   |
+|          |              |                |          |           |
++----------+--------------+----------------+----------+-----------+
 
-Data link
+
+Data link layer
 ------
 
-Transport
+Transport layer
 -------
 
 
