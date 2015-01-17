@@ -29,6 +29,39 @@ bHome is architectured like this:
 
 Protocol
 =====
+
+Physical layer
+------
+bHome relies on UHF 433MHz frequencies. The project relies on the VirtualWire implementation.
+
+| PREAMBLE | START SYMBOL | MESSAGE LENGTH |  PAYLOAD  | FCS       |
+|----------|--------------|----------------|-----------|-----------|
+|          | 0xb38        | (4-30)         | max = 27b |           |
+| 32 bits  | 12 bits      | 1 byte         | n Bytes   | 2 bytes   |
+
+
+Data link layer
+------
+
+Each "home" is identified by an 1 byte identifier (255 homes max)
+Each node is identified by a 2 bytes identifier (65535 nodes max, 0 reserved for master, currently hard coded, in the future we plan to provide a mean to pair devices in a network).
+The nodes 1 to 1023 are reserved for grouping purpose.
+
+| HOME ADDRESS | EMITTER ADDRESS | RECEIVER ADDRESS |  PAYLOAD  | REMAINING PACKETS | 
+|--------------|-----------------|------------------|-----------|-------------------|
+|   0-255      | 0 or 1024-65545 |   0-65536        | max = 21b |                   |
+|   8 bits     | 16 bits         |   16 bits        | n Bytes   | 8 bits            |
+ 
+Application layer
+-------
+
+| COMMAND TYPE | DATA       |
+|--------------|------------|
+|              | max = 20b  |
+| 8 bits       | n Bytes    |
+
+TYPE OF COMMAND
+
 The master is the only one which can start a communication, the nodes can only answer (ACK or "real" answer).
 
 The master can send packets to a single receiver, or to everyone (broadcast).
