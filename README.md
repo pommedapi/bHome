@@ -30,6 +30,14 @@ bHome is architectured like this:
 Protocol
 =====
 
+| PREAMBLE | START SYMBOL | MESSAGE LENGTH | HOME ADDRESS | EMITTER ADDRESS | RECEIVER ADDRESS | COMMAND TYPE | DATA       | REMAINING PACKETS | FCS       |
+|----------|--------------|----------------|--------------|-----------------|------------------|--------------|------------|-------------------|-----------|
+|          | 0xb38        | (4-30)         |   0-255      | 0 or 1024-65545 |   0-65536        |              | max = 20b  |                   |           |
+| 32 bits  | 12 bits      | 1 byte         |   8 bits     | 16 bits         |   16 bits        | 8 bits       | n Bytes    | 8 bits            | 2 bytes   |
+
+
+
+
 Physical layer
 ------
 bHome relies on UHF 433MHz frequencies. The project relies on the VirtualWire implementation.
