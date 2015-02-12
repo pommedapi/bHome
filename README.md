@@ -33,7 +33,7 @@ Protocol
 | PREAMBLE | START SYMBOL | MESSAGE LENGTH | HOME ADDRESS | EMITTER ADDRESS | RECEIVER ADDRESS | COMMAND TYPE | DATA       | REMAINING PACKETS | FCS       |
 |----------|--------------|----------------|--------------|-----------------|------------------|--------------|------------|-------------------|-----------|
 |          | 0xb38        | (4-30)         |   0-255      | 0 or 1024-65545 |   0-65536        |              | max = 20b  |                   |           |
-| 32 bits  | 12 bits      | 1 byte         |   8 bits     | 16 bits         |   16 bits        | 8 bits       | n Bytes    | 8 bits            | 2 bytes   |
+| 4 bytes  | 12 bits      | 1 byte         |   1 byte     | 2 bytes         |   2 bytes        | 1 byte       | n Bytes    | 1 byte            | 2 bytes   |
 
 
 
@@ -45,7 +45,7 @@ bHome relies on UHF 433MHz frequencies. The project relies on the VirtualWire im
 | PREAMBLE | START SYMBOL | MESSAGE LENGTH |  PAYLOAD  | FCS       |
 |----------|--------------|----------------|-----------|-----------|
 |          | 0xb38        | (4-30)         | max = 27b |           |
-| 32 bits  | 12 bits      | 1 byte         | n Bytes   | 2 bytes   |
+| 4 bytes  | 12 bits      | 1 byte         | n Bytes   | 2 bytes   |
 
 
 Data link layer
@@ -58,7 +58,7 @@ The nodes 1 to 1023 are reserved for grouping purpose.
 | HOME ADDRESS | EMITTER ADDRESS | RECEIVER ADDRESS |  PAYLOAD  | REMAINING PACKETS | 
 |--------------|-----------------|------------------|-----------|-------------------|
 |   0-255      | 0 or 1024-65545 |   0-65536        | max = 21b |                   |
-|   8 bits     | 16 bits         |   16 bits        | n Bytes   | 8 bits            |
+|   1 byte     | 2 bytes         |   2 bytes        | n Bytes   | 1 byte            |
  
 Application layer
 -------
@@ -66,7 +66,7 @@ Application layer
 | COMMAND TYPE | DATA       |
 |--------------|------------|
 |              | max = 20b  |
-| 8 bits       | n Bytes    |
+| 1 byte       | n Bytes    |
 
 TYPE OF COMMAND
 
