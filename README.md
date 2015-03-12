@@ -8,6 +8,16 @@ The reason I started this project is because I wanted to have a cheap, simple ye
 The commercial systems are way to expensive, or consists of simple on/off systems.
 
 
+Pour ce que j'en ai compris pas de programmation à la main de chaque arduinos :
+  - les noeud (arduinos) on une programmation générique de tout les modules supportés par bHome(est-ce que ça tiens dans l'ATmega????)
+  - les noeud vont avoir en mémoire une déclaration des modules connectés sur ces derniers.
+  - le noeud va avoir en mémoire (EEPROM??? un peu juste pour ça à mon goût) les scénarios qu'il doit appliquer.
+ 
+Les noeuds sont donc relativement indépendants du Pi, le Pi servant de chef d'orchestre dans la mesure où c'est à partir de celui-ci que l'on pourra "reconfigurer" les scénarios des différents noeuds.
+
+pommy - Il me semble que cette programmation générique risque d'être compliqués à mettre en place en ne s'appuyant que sur les spec d'un ATmega. L'espace disponible est particulièrement limité. Prévoir éventuellement un moyen de stockage supplémentaire plus conséquent (qui permettrais la reconfiguration de l'ATmega OTA [_Oh putain ça c'est une feature mega cool!!!_] et des scénarios nolimit&tm
+
+
 Why?
 ======
 I wanted to have a home automation fora while, and after some researches on the Internet, I couldn't find something that _really_ suits my needs.
