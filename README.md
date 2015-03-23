@@ -15,8 +15,7 @@ Pour ce que j'en ai compris pas de programmation à la main de chaque arduinos :
  
 Les noeuds sont donc relativement indépendants du Pi, le Pi servant de chef d'orchestre dans la mesure où c'est à partir de celui-ci que l'on pourra "reconfigurer" les scénarios des différents noeuds.
 
-pommy - Il me semble que cette programmation générique risque d'être compliqués à mettre en place en ne s'appuyant que sur les spec d'un ATmega. L'espace disponible est particulièrement limité. Prévoir éventuellement un moyen de stockage supplémentaire plus conséquent (qui permettrais la reconfiguration de l'ATmega OTA [_Oh putain ça c'est une feature mega cool!!!_] et des scénarios nolimit&tm
-
+pommy - Il me semble que cette programmation générique risque d'être compliqués à mettre en place en ne s'appuyant que sur les spec d'un ATmega. L'espace disponible est particulièrement limité. Prévoir éventuellement un moyen de stockage supplémentaire plus conséquent et des scénarios nolimit&tm
 
 Why?
 ======
